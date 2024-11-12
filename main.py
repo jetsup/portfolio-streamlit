@@ -1,5 +1,4 @@
 import streamlit as st
-from views.components.navbar import navbar                                                               
 
 home_page = st.Page(
     page="views/home.py",
