@@ -33,6 +33,9 @@ with column2:
     if st.button("✉️ Contact me"):
         show_contact_form()
 
+st.markdown('My name is :blue[George Ngigi]. I am a passionate software developer for :blue[desktop], :blue[android], :blue[web] and :blue[embedded systems]. I have specialized in **desktop development using Java and Python**, **web development using Django and Laravel**, and **embedded systems development using STM32, ESP-IDF, and Arduino**. For **android development, I am proficient with Java programming language** but I am still learning Kotlin, the defacto and official language. You can find some of my projects in my [GitHub](https://www.github.com/jetsup). I am also a robotics enthusiast and have experience in developing robotic systems using _ROS, OpenCV, and Raspberry Pi_.')
+st.markdown("---")
+
 # Experience, Education and Skills
 st.header("Experience")
 st.markdown(
