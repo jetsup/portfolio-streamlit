@@ -20,7 +20,7 @@ I am also a robotics enthusiast and have experience in developing robotic system
 """
 
 def call_gemini(prompt: str) -> str:
-    response = model.generate_content(f"Given the context:\n{ABOUT_ME_CONTEXT}\n\nUser: {prompt}")
+    response = model.generate_content(f"Only give precise answers.\nGiven the context:\n{ABOUT_ME_CONTEXT}\n\nUser: {prompt}")
     return response.text if response.text else "I'm sorry, I don't understand the question."
 
 
