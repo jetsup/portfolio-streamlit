@@ -32,9 +32,15 @@ my_journey_page = st.Page(
     icon="🚀",
 )
 
+about_chatbot_page = st.Page(
+    page="views/chatbot_gemini.py",
+    title="Chatbot",
+    icon="🤖",
+)
+
 pg = st.navigation(
     {
-        "Home": [about_page],
+        "Home": [about_page, about_chatbot_page],
         "Projects and Hobbies": [projects_page, hobbies_page, my_journey_page],
     }
 )

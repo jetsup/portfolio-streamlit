@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import send_email, is_email_valid
+from helpers.utils import send_email, is_email_valid, send_confirmation_email
 
 def contact_form():
     with st.form("contact_form"):
@@ -13,7 +13,12 @@ def contact_form():
         if submit_button:
             if is_email_valid(email):
                 if send_email(name, email, subject, message):
-                    st.success("Message sent successfully!")
+                    if send_confirmation_email(email, subject, message):
+                        st.success("Message sent successfully!")
+                    else:
+                        st.error("An error occurred. Please try again.")
+                        print("An error occurred. Please try again.")
+                        st.stop()
                 else:
                     st.error("An error occurred. Please try again.")
                     print("An error occurred. Please try again.")
